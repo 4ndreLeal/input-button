@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+
+<input/>
+
+<button>Clique para testar sua resposta</button>
+
+<script>
+	
+var respostaCerta = "helloWorld"; // var respostaCerta = Math.round(Math.random() * 10);
+
+var respostaUsuario = document.querySelector("input"); // pegar value do input do html
+respostaUsuario.focus();
+
+function testarResposta(){
+	if(respostaUsuario.value == respostaCerta){
+		alert("Resposta certa!");
+	} else{
+		alert("Resposta errada!");
+	}
+	respostaUsuario.value = ""; // limpar o data input
+	respostaUsuario.focus(); // cursor selecionado na caixa de input
+}
+
+var botao = document.querySelector("button"); 
+
+botao.onclick = testarResposta; // ao clicar, pegar conteudo da funcao testarResposta() e executá-lo
+
+</script>
